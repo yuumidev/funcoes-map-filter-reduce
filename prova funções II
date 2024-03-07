@@ -1,0 +1,32 @@
+#Importando o functools para utilizar a função reduce
+from functools import reduce
+
+
+#Lista dos números pré definidos
+numeros = [1,2,3,4,5,6,7,8,9,10]
+
+
+#Usando o map() com o lambda para obter o quadrado de cada número.
+quadrado_com_map = map(lambda x: x**2, numeros)
+#Uma nova lista com o quadrado de cada número da lista de números
+resultado_quadrado = list(quadrado_com_map)
+
+
+#Usando o filter() com o lambda para obter somente os números pares.
+pares_com_filter = filter(lambda x: x % 2 == 0, numeros)
+#Uma nova lista com números pares da lista de números.
+resultado_pares = list(pares_com_filter)
+
+
+#Usando o reduce() para obter a soma dos números.
+soma_com_reduce = reduce(lambda x, y: x + y, numeros)
+
+
+#Resultado do map()
+print(f'O quadrado dos números é : {resultado_quadrado}')
+
+#Resultado do filter()
+print(f'Os números pares da lista são: {resultado_pares}')
+
+#Resultado do reduce()
+print(f'A soma de todos os números da lista é de : {soma_com_reduce}')
